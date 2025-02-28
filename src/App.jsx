@@ -1,11 +1,10 @@
 import { useState } from "react";
 
 import componentsImg from "./assets/components.png";
-import { CORE_CONCEPTS } from "./data";
+import { CORE_CONCEPTS, EXAMPLES } from "./data";
 import Header from "./components/Header/Header.jsx";
 import CoreConcept from "./components/CoreConcepts"; // .jsx extension optional
 import TagButton from "./components/TabButton.jsx";
-import { EXAMPLES } from "./data.js";
 
 function App() {
   const [selectedTopic, setSelectedTopic] = useState();
@@ -17,6 +16,7 @@ function App() {
 
   let tabContent = <p>Please select a topic</p>;
 
+  // dynamcially updating variable
   if (selectedTopic) {
     tabContent = (
       <div>
@@ -36,6 +36,7 @@ function App() {
         <section id="core-concepts">
           <h2>Core Concepts</h2>
           <ul>
+            {/* multiple components with dynamic props */}
             {/* <CoreConcept
               title="Components"
               description="The core UI building blocks"
@@ -48,6 +49,8 @@ function App() {
             />
             <CoreConcept {...CORE_CONCEPTS[2]} />
             <CoreConcept {...CORE_CONCEPTS[3]} /> */}
+
+            {/* dynamically generating components */}
             {CORE_CONCEPTS.map((concept) => (
               <CoreConcept key={concept.title} {...concept}></CoreConcept>
             ))}

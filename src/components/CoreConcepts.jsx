@@ -1,3 +1,4 @@
+{/* passing props */}
 /* function CoreConcept(props) {
   return (
     <li>
