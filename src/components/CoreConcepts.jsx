@@ -21,8 +21,8 @@ export default function CoreConcepts() {
             <CoreConcept {...CORE_CONCEPTS[3]} /> */}
 
         {/* dynamically generating components */}
-        {CORE_CONCEPTS.map((concept) => (
-          <CoreConcept key={concept.title} {...concept}></CoreConcept>
+        {CORE_CONCEPTS.map((conceptItem) => (
+          <CoreConcept key={conceptItem.title} {...conceptItem}></CoreConcept>
         ))}
       </ul>
     </section>

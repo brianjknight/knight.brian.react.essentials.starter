@@ -5,8 +5,6 @@ import Examples from "./components/Examples.jsx";
 function App() {
   return (
     <>
-      {" "}
-      {/* shorthand for <Fragment> to avoid extra <div> element*/}
       <Header />
       <main>
         <CoreConcepts />
